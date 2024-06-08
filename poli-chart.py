@@ -81,8 +81,7 @@ with st.container():
       st.altair_chart(chart, use_container_width=True)
       st.html("""<span style="color:black; font-size:12px; font-style:italic;">Source: Hansard Tables, Political Affairs 2024</span>""")
 
-st.divider()
-#st.altair_chart(final_chart + minor_parties_chart)#
+   st.divider()   #st.altair_chart(final_chart + minor_parties_chart)#
 
    
    
