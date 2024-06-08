@@ -69,13 +69,12 @@ with stylable_container(
            }
            """,#            border-radius: 0.5rem;
    ):
-      with st.container(height=500):
-      
-         st.html("""
+      st.html("""
          <span style="color:black; font-size:16px; font-weight:bold; padding-right:50px;">
             Political Parties, Contribution in Latest Parliamentary Session
          </span>
-         """)       
+         """)   
+      with st.container(height=550, border=False):    
          st.caption('Speech time in parliament starting in August 2022 to June 2024')   # chart = line_point_chart(d)
          chart = area_chart(d)
          st.altair_chart(chart, use_container_width=True)
