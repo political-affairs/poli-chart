@@ -60,7 +60,7 @@ d = data[data['party'].isin(data.party.unique())]
 
 #            border: 1px solid rgba(49, 51, 63, 0.2);
    
-with st.container():
+with st.container(height=300):
    with stylable_container(
        key="container_with_border",
        css_styles="""
