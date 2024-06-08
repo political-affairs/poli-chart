@@ -121,9 +121,13 @@ def area_chart(d):
         ]
     )#Speech Time (Days)
 
-    final_chart = (area_chart).properties(
-        background='transparent', padding={'left': 0, 'right': 20, 'top': 0, 'bottom': 0}
+
+    final_chart = area_chart.properties(
+        background='transparent',
+        padding={'left': 0, 'right': 20, 'top': 0, 'bottom': 0},
+        height=300  # Reduce height, adjust as needed
     )
+
 
 
     # Adjust the x-axis grid lines
