@@ -69,7 +69,7 @@ with stylable_container(
            }
            """,#            border-radius: 0.5rem;
    ):
-      with st.container(height=505, border=False): 
+      with st.container(height=390, border=False): 
          st.html("""
          <span style="color:black; font-size:16px; font-weight:bold; padding-right:50px;">
             Political Parties, Contribution in Latest Parliamentary Session
