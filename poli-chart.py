@@ -60,27 +60,27 @@ d = data[data['party'].isin(data.party.unique())]
 
 #            border: 1px solid rgba(49, 51, 63, 0.2);
    
+with st.container():
+   with stylable_container(
+       key="container_with_border",
+       css_styles="""
+           {
+               padding: calc(1em - 1px);
+               background-color: #DCDCDD;
+           }
+           """,#            border-radius: 0.5rem;
+   ):
+      st.html("""
+      <span style="color:black; font-size:16px; font-weight:bold; padding-right:50px;">
+         Political Parties, Contribution in Latest Parliamentary Session
+      </span>
+      """)       
+      st.caption('Speech time in parliament starting in August 2022 to June 2024')   # chart = line_point_chart(d)
+      chart = area_chart(d)
+      st.altair_chart(chart, use_container_width=True)
+      st.html("""<span style="color:black; font-size:12px; font-style:italic;">Source: Hansard Tables, Political Affairs 2024</span>""")
    
-with stylable_container(
-    key="container_with_border",
-    css_styles="""
-        {
-            padding: calc(1em - 1px);
-            background-color: #DCDCDD;
-        }
-        """,#            border-radius: 0.5rem;
-):
-   st.html("""
-   <span style="color:black; font-size:16px; font-weight:bold; padding-right:50px;">
-      Political Parties, Contribution in Latest Parliamentary Session
-   </span>
-   """)       
-   st.caption('Speech time in parliament starting in August 2022 to June 2024')   # chart = line_point_chart(d)
-   chart = area_chart(d)
-   st.altair_chart(chart, use_container_width=True)
-   st.html("""<span style="color:black; font-size:12px; font-style:italic;">Source: Hansard Tables, Political Affairs 2024</span>""")
-
-st.divider()   #st.altair_chart(final_chart + minor_parties_chart)#
+   st.divider()   #st.altair_chart(final_chart + minor_parties_chart)#
 
 
 
