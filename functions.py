@@ -114,7 +114,7 @@ def area_chart(d):
 
     # Area chart
     area_chart = base_chart.mark_area(opacity=0.6, interpolate='cardinal').encode(
-        y='Speech Time (Days):Q',tooltip=[
+        y=alt.Y('Speech Time (Days):Q', axis=alt.Axis(title='',)),tooltip=[
             alt.Tooltip('month_number:N', title='Month'),
             alt.Tooltip('Speech Time (Days):Q', title='', format='.2f', formatType='number'),
             alt.Tooltip('party:N', title='Party')
