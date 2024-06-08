@@ -71,17 +71,17 @@ with st.container():
            }
            """,#            border-radius: 0.5rem;
    ):
-           st.html("""
-           <span style="color:black; font-size:16px; font-weight:bold; padding-right:20px;">
-               Political Parties, Contribution in Latest Parliamentary Session
-           </span>
-           """)       
-            st.caption('Speech time in parliament starting in August 2022 to June 2024')
-           # chart = line_point_chart(d)
-           chart = area_chart(d)
-           st.altair_chart(chart, use_container_width=True)
-           st.html("""<span style="color:black; font-size:12px; font-style:italic;">Source: Hansard Tables, Political Affairs 2024</span>""")
-      
+     st.html("""
+     <span style="color:black; font-size:16px; font-weight:bold; padding-right:20px;">
+         Political Parties, Contribution in Latest Parliamentary Session
+     </span>
+     """)       
+      st.caption('Speech time in parliament starting in August 2022 to June 2024')
+     # chart = line_point_chart(d)
+     chart = area_chart(d)
+     st.altair_chart(chart, use_container_width=True)
+     st.html("""<span style="color:black; font-size:12px; font-style:italic;">Source: Hansard Tables, Political Affairs 2024</span>""")
+
       st.divider()
        #st.altair_chart(final_chart + minor_parties_chart)#
    
