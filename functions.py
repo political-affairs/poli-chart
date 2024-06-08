@@ -28,12 +28,12 @@ def line_point_chart1(d):
     #     tooltip=['month_number', 'Speech Time (Days)', 'party']
     # )
     # Cardinal line chart
-    line_chart = base_chart.mark_line(size=4, interpolate='cardinal', opacity=0.9).encode(
-        y='Speech Time (Days):Q'
-    )
+    # line_chart = base_chart.mark_line(size=4, interpolate='cardinal', opacity=0.9).encode(
+    #     y='Speech Time (Days):Q'
+    # )
 
-    # Combine scatter chart and line chart
-    final_chart = (scatter_chart + line_chart + text_chart).properties(
+    # Combine scatter chart and line chart + line_chart + text_chart
+    final_chart = (scatter_chart ).properties(
         background='transparent', padding={'left': 0, 'right': 40, 'top': 10, 'bottom': 0}
 
     )
