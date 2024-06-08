@@ -42,7 +42,7 @@ def load_data():
 
 data = load_data()
 st.logo('logo.png')
-with st.container():
+with st.container(height=300):
    # Streamlit App
    st.title('Fresh Off the Podium', anchor=False)
    # st.subheader("Recent debates in Ontario parliament", anchor=False)
@@ -72,7 +72,7 @@ with st.container():
            """,#            border-radius: 0.5rem;
    ):
       st.html("""
-      <span style="color:black; font-size:16px; font-weight:bold; padding-right:20px;">
+      <span style="color:black; font-size:16px; font-weight:bold; padding-right:50px;">
          Political Parties, Contribution in Latest Parliamentary Session
       </span>
       """)       
