@@ -138,7 +138,7 @@ with st.container():
             d = data[['name', 'Speech Time (Hrs)']]
             # d = d.set_index('name')
             bar_chart_full(data, 'Question Period')
-            st.write("Question Period is designed to provide a forum for Members of Provincial Parliament (MPPs) to question the Premier and Cabinet Ministers about their policies, actions, and decisions. It's a key mechanism for holding the government accountable to the legislature and, by extension, to the public.Question Period is designed to provide a forum for Members of Provincial Parliament (MPPs) to question the Premier and Cabinet Ministers about their policies, actions, and decisions. It's a key mechanism for holding the government accountable to the legislature and, by extension, to the public.")
+            st.write("Question Period is designed to provide a forum for Members of Provincial Parliament (MPPs) to question the Premier and Cabinet Ministers about their policies, actions, and decisions. It's a key mechanism for holding the government accountable to the legislature and, by extension, to the public.")
 
 
         with c[1]:
