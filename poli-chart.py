@@ -60,8 +60,7 @@ d = data[data['party'].isin(data.party.unique())]
 
 #            border: 1px solid rgba(49, 51, 63, 0.2);
    
-with st.container(height=300):
-   with stylable_container(
+with stylable_container(
        key="container_with_border",
        css_styles="""
            {
@@ -70,20 +69,20 @@ with st.container(height=300):
            }
            """,#            border-radius: 0.5rem;
    ):
-      st.html("""
-      <span style="color:black; font-size:16px; font-weight:bold; padding-right:50px;">
-         Political Parties, Contribution in Latest Parliamentary Session
-      </span>
-      """)       
-      st.caption('Speech time in parliament starting in August 2022 to June 2024')   # chart = line_point_chart(d)
-      chart = area_chart(d)
-      st.altair_chart(chart, use_container_width=True)
-      st.html("""<span style="color:black; font-size:12px; font-style:italic;">Source: Hansard Tables, Political Affairs 2024</span>""")
-   
-   st.divider()   #st.altair_chart(final_chart + minor_parties_chart)#
+      with st.container(height=500):
+      
+         st.html("""
+         <span style="color:black; font-size:16px; font-weight:bold; padding-right:50px;">
+            Political Parties, Contribution in Latest Parliamentary Session
+         </span>
+         """)       
+         st.caption('Speech time in parliament starting in August 2022 to June 2024')   # chart = line_point_chart(d)
+         chart = area_chart(d)
+         st.altair_chart(chart, use_container_width=True)
+         st.html("""<span style="color:black; font-size:12px; font-style:italic;">Source: Hansard Tables, Political Affairs 2024</span>""")
 
 
-
+st.divider()  
 st.write("""
 At almost 32 days worth of dialogue, the Ontario parliament holds many keys to understanding our elected officials. For the vast majority of parliamentarians their major role and contribution to democracy will be in the form of votes, questions or answers about government programs/plans,  advocating for the disadvantage or advantage of proposed legislation, liaison with the ministries, and committee votes or reports. Hopefully they also get to help develop ideas during the private party caucus to benefit constituents. And if they are one of the lucky few, they will be drafting laws and managing ministries from the cabinet that makes up the executive government.
 
