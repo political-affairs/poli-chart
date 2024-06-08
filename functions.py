@@ -108,7 +108,7 @@ def area_chart(d):
     base_chart = alt.Chart(d).encode(
         x=alt.X('month_number:N', axis=alt.Axis(title='Months of Parliament Session', titleColor='black', ticks=True, tickSize=10, labelColor='black')),
         y=alt.Y('Speech Time (Days):Q', axis=alt.Axis(title='Speech Time (days)', labelColor='black', titleColor='black')),
-        color=alt.Color('party:N', scale=alt.Scale(range=colors))#, legend=None
+        color=alt.Color('party:N', scale=alt.Scale(range=colors), legend=alt.Legend(labelColor='black',titleColor='black', orient='top'))
     )
 
 
@@ -122,15 +122,8 @@ def area_chart(d):
     )
 
 
-    # # Scatter chart
-    # scatter_chart = base_chart.mark_circle(opacity=0.6, size=50).encode(
-    #     tooltip=[            alt.Tooltip('month_number:N', title='Month'),
-    #                 alt.Tooltip('Speech Time (Days):Q', title='Speech Time (Days)', format='.2f', formatType='number'),
-    #                 alt.Tooltip('party:N', title='Party')]
-    # )
-
     final_chart = (area_chart).properties(
-        background='transparent', padding={'left': 0, 'right': 40, 'top': 10, 'bottom': 0}
+        background='transparent', padding={'left': 0, 'right': 0, 'top': 10, 'bottom': 0}
     )
 
 
