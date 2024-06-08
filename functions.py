@@ -183,7 +183,7 @@ def bar_chart(data):
                ),
         y=alt.Y('Speech Time (Hrs):Q', axis=alt.Axis(title='', titleColor='black'),scale=alt.Scale(domain=[0, 12])),
         color=alt.Color('name:N', legend=None, scale=alt.Scale(domain=list(color_mapping.keys()), range=list(color_mapping.values()))  # Set hex colors
-), tooltip=[alt.Tooltip('Speech Time (Hrs):Q', format='.1f')])
+), tooltip=[alt.Tooltip('Speech Time (Hrs):Q', format='.1f'), alt.Tooltip('name:N', title='MPP')])
 
     # Combine the bar chart and text labels
     final_chart = bar_chart.properties( background='transparent', padding={'left': 0, 'right': 30, 'top': 0, 'bottom': 0},
