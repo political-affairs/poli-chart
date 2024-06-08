@@ -52,15 +52,15 @@ def bar_chart_full(d, text):
             }
             """,#            border-radius: 0.5rem;
     ):
-        st.html(f"""
-            <span style="color:black; font-size:24px; font-style:italic; font-weight:bold; line-height:0.1;">
-                {text}
-            </span>
-        """)
-        st.html("""<span style="color:black; font-size:12px; font-style:italic;">Indvidual speech time during session type (hrs)</span>""")
-
-        chart = bar_chart(d[['name', 'Speech Time (Hrs)']])
-        st.altair_chart(chart, use_container_width=True)
+        with st.container(height=390, border=False):
+            st.html(f"""
+                <span style="color:black; font-size:24px; font-style:italic; font-weight:bold; line-height:0.1;">
+                    {text}
+                </span>
+            """)
+            st.html("""<span style="color:black; font-size:12px; font-style:italic;">Indvidual speech time during session type (hrs)</span>""")
+            chart = bar_chart(d[['name', 'Speech Time (Hrs)']])
+            st.altair_chart(chart, use_container_width=True)
 
 def quarter_year_key(qy):
     quarter, year = qy.split('-')
