@@ -138,7 +138,7 @@ with st.container():
             d = data[['name', 'Speech Time (Hrs)']]
             # d = d.set_index('name')
             bar_chart_full(data, 'Question Period')
-            st.write('Question Period is a comprehensive look at all the business, bill proposals, that is before the Assembly and its committees on a given day. Not every item of business will be raised, and the Government House Leader chooses the order of business under Government Orders. On Private Members’ day, the order of Private Members business is decided on a rotational and designated priority basis. ')
+            st.write("Question Period is designed to provide a forum for Members of Provincial Parliament (MPPs) to question the Premier and Cabinet Ministers about their policies, actions, and decisions. It's a key mechanism for holding the government accountable to the legislature and, by extension, to the public.Question Period is designed to provide a forum for Members of Provincial Parliament (MPPs) to question the Premier and Cabinet Ministers about their policies, actions, and decisions. It's a key mechanism for holding the government accountable to the legislature and, by extension, to the public.")
 
 
         with c[1]:
@@ -147,4 +147,4 @@ with st.container():
             d = data[['name', 'Speech Time (Hrs)']]
             # d = d.set_index('name')
             bar_chart_full(data, 'Orders of the Day')
-            st.write('Orders of the Day is a comprehensive look at all the business, bill proposals, that is before the Assembly and its committees on a given day. Not every item of business will be raised, and the Government House Leader chooses the order of business under Government Orders. On Private Members’ day, the order of Private Members business is decided on a rotational and designated priority basis. ')
+            st.write('Orders of the Day is a comprehensive look at all the business, bill proposals, that is before the Assembly and its committees on a given day. Not every item of business will be raised, and the Government House Leader chooses the order of business under Government Orders. A Member of Provincial Parliament (MPP) presents a bill to the Legislative Assembly for consideration. It may propose a new law or a change to an existing law.')
