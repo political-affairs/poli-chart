@@ -80,7 +80,7 @@ with stylable_container(
         st.html("""<span style="color:black; font-size:12px; font-style:italic;">Source: Hansard Tables, Political Affairs 2024</span>""")
    
 
-st.caption('CHART:Political Parties Contributions'
+st.caption('CHART:Political Parties Contributions')
 st.divider()
     #st.altair_chart(final_chart + minor_parties_chart)#
 
