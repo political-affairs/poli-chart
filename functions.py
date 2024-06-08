@@ -8,7 +8,7 @@ def line_point_chart1(d):
     # Base chart        x=alt.X('month_number:N', axis=alt.Axis(title='', ticks=True, tickSize=10)),
     base_chart = alt.Chart(d).encode(
         x=alt.X('month_number:N', axis=alt.Axis(title='', ticks=True, tickSize=10, labelColor='black')),
-        y=alt.Y('Speech Time (Days):Q', axis=alt.Axis(title='', labelColor='black', titleColor='black')),
+        y=alt.Y('Speech Time (Days):Q', axis=alt.Axis(title='testies', labelColor='black')),
         color=alt.Color('party:N', scale=alt.Scale(range=colors), legend=None)
     )
     # Party labels at the end of the line Speech Time (days)
