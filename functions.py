@@ -107,19 +107,19 @@ def area_chart(d):
     # Base chart
     base_chart = alt.Chart(d).encode(
         x=alt.X('month_number:N', axis=alt.Axis(title='Months of Parliament Session', titleColor='black', ticks=True, tickSize=10, labelColor='black')),
-        y=alt.Y('Speech Time (Days):Q', axis=alt.Axis(title='Speech Time (days)', labelColor='black', titleColor='black')),
+        y=alt.Y('Speech Time (Days):Q', axis=alt.Axis(title='', labelColor='black', titleColor='black')),
         color=alt.Color('party:N', scale=alt.Scale(range=colors), legend=alt.Legend(labelColor='black',titleColor='black', orient='top'))
-    )
+    )#Speech Time (days)
 
 
     # Area chart
     area_chart = base_chart.mark_area(opacity=0.6, interpolate='cardinal').encode(
         y='Speech Time (Days):Q',tooltip=[
             alt.Tooltip('month_number:N', title='Month'),
-            alt.Tooltip('Speech Time (Days):Q', title='', format='.2f', formatType='number'),
+            alt.Tooltip('Speech Time (Days):Q', title='Speech Time (Days)', format='.2f', formatType='number'),
             alt.Tooltip('party:N', title='Party')
         ]
-    )#Speech Time (Days)
+    )
 
     final_chart = (area_chart).properties(
         background='transparent', padding={'left': 0, 'right': 5, 'top': 10, 'bottom': 0}
