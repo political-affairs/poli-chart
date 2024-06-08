@@ -72,7 +72,7 @@ with stylable_container(
         """,#            border-radius: 0.5rem;
 ):
 
-        st.html("""<span style="color:black; font-size:16px; font-style:italic; font-weight:bold;"> Political Parties, Contribution in Latest Parliamentary Session</span>""")
+        st.html("""<span style="color:black; font-size:16px; font-weight:bold;"> Political Parties, Contribution in Latest Parliamentary Session</span>""")
         st.caption('Speech time in parliament starting in August 2022 to June 2024')
         # chart = line_point_chart(d)
         chart = area_chart(d)
