@@ -3,7 +3,10 @@ import pandas as pd
 import altair as alt
 from streamlit_extras.stylable_container import stylable_container
 from functions import line_point_chart, area_chart
-
+st.set_page_config(
+   page_title="Poli-Chart",
+   layout="wide"
+)
 
 @st.experimental_dialog("Seat Composition")
 def seat_comp():
